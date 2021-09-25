@@ -20,11 +20,18 @@ public partial class index : System.Web.UI.Page
             (PurchaseCollection)xmlSerializer.Deserialize(fs);
         fs.Close();
 
-        txtLargeOrders.Text = purchases.purchases[0].fullName;
+        int largeOrders = 0;
+
+        foreach (Purchase purchase in purchases.purchases)
+        {
+            if (purchase.quantity >= 10)
+            {
+                largeOrders++;
+            }
+        }
+        txtLargeOrders.Text = "Large Orders:" + largeOrders.ToString();
     }
     
-
-
     protected void PopulatePurchaseGridView(object sender, EventArgs e)
     {
         DataTable dt = new DataTable();
