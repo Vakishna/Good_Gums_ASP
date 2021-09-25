@@ -36,10 +36,19 @@
                      <asp:ListItem Enabled="True" Selected="False" Text="Grevillia Robusta" Value="grevilliaRobusta" />
                      <asp:ListItem Enabled="True" Selected="False" Text="Telopea Speciosissima" Value="telopeaSpeciosissima" />
                      <asp:ListItem Enabled="True" Selected="False" Text="Boronia Serrulata" Value="boroniaSerrulata" />
-
+                     <asp:ListItem Enabled="True" Selected="False" Text="Anigozanthos Flavidus" Value="anigozanthosFlavidus" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Angophora Costata" Value="angophoraCostata" />
                 </asp:DropDownList>
             </div>
-
+            <div>
+                <asp:Label ID="lblUnitPrice" runat="server" Text="Unit Price: "></asp:Label>
+                <asp:TextBox ID="txtUnitPrice" runat="server"></asp:TextBox>
+            </div>
+            <div>
+                <asp:Label ID="lblQty" runat="server" Text="Quantity: "></asp:Label>
+                <asp:TextBox ID="txtQty" runat="server"></asp:TextBox>
+            </div>
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
         </fieldset>
 
 
