@@ -15,7 +15,7 @@ public class Purchase
         public string fullName { get; set; }
         public string emailAddress { get; set; }
         public string productname { get; set; }
-        public float unitprice { get; set; }
+        public double unitprice { get; set; }
         public int quantity { get; set; }
 
         public Purchase()
@@ -28,10 +28,11 @@ public class Purchase
             this.quantity = 0;
         }
 
-        public Purchase(int id, string fullName, string productname, float unitprice, int quantity)
+        public Purchase(int id, string fullName, string emailAddress, string productname, double unitprice, int quantity)
         {
             this.id = id;
             this.fullName = fullName;
+            this.emailAddress = emailAddress;
             this.productname = productname;
             this.unitprice = unitprice;
             this.quantity = quantity;

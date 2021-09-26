@@ -13,6 +13,8 @@
         <fieldset>
             <legend>Purchase Form</legend>
             <br />
+            <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+            <br />
             <div>
                 <asp:Label ID="lblFullName" runat="server" Text="Full Name: "></asp:Label>
                 <asp:TextBox ID="txtFullName" runat="server"></asp:TextBox>
@@ -47,19 +49,18 @@
                 <asp:Label ID="lblUnitPrice" runat="server" Text="Unit Price: "></asp:Label>
                 <asp:TextBox ID="txtUnitPrice" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvUnitPrice" ControlToValidate="txtUnitPrice" runat="server" ErrorMessage="Required Unit Price" Display="None"></asp:RequiredFieldValidator>
-                <asp:RangeValidator ID="rvUnitPrice" runat="server" ErrorMessage="Invalid Unit Price" Display="None" ControlToValidate="txtUnitPrice" Type="Double"></asp:RangeValidator>
+                <asp:RangeValidator ID="rvUnitPrice" runat="server" ErrorMessage="Invalid Unit Price" Display="None" ControlToValidate="txtUnitPrice" MinimumValue="0.10" MaximumValue="10000.00" Type="Double"></asp:RangeValidator>
             </div>
             <div>
                 <asp:Label ID="lblQty" runat="server" Text="Quantity: "></asp:Label>
                 <asp:TextBox ID="txtQty" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvTxtQty" ControlToValidate="txtQty" runat="server" ErrorMessage="Required Quantity" Display="None"></asp:RequiredFieldValidator>
-                <asp:RangeValidator ID="rvQty" runat="server" ErrorMessage="Invalid Unit Price" Display="None" ControlToValidate="txtUnitPrice" MinimumValue="1" MaximumValue="1000" Type="Integer"></asp:RangeValidator>
+                <asp:RangeValidator ID="rvQty" runat="server" ErrorMessage="Invalid Quantity" Display="None" ControlToValidate="txtQty" MinimumValue="1" MaximumValue="1000" Type="Integer"></asp:RangeValidator>
             </div>
             <div>
                 <asp:ValidationSummary ID="vsAdd" runat="server" />
-
             </div>
-            <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+            <asp:Button ID="btnAddSubmit" OnClick="btnAddSubmit_Click" runat="server" Text="Submit" />
         </fieldset>
     </form>
 </body>

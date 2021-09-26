@@ -14,8 +14,10 @@ public partial class index : System.Web.UI.Page
 {
 
     protected void CalcLargeOrders(object sender, EventArgs e) {
+        string filePath = Path.Combine(Server.MapPath("~"), @"GoodGumsXML.xml");
+
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(PurchaseCollection));
-        FileStream fs = new FileStream("C:\\Users\\vthayalan\\Dev\\19279795_cse2icx_assignment3\\GoodGumsXML.xml", FileMode.Open);
+        FileStream fs = new FileStream(filePath, FileMode.Open);
         PurchaseCollection purchases =
             (PurchaseCollection)xmlSerializer.Deserialize(fs);
         fs.Close();
@@ -32,6 +34,7 @@ public partial class index : System.Web.UI.Page
         txtLargeOrders.Text = "Large Orders:" + largeOrders.ToString();
     }
     
+
     protected void PopulatePurchaseGridView(object sender, EventArgs e)
     {
         DataTable dt = new DataTable();
