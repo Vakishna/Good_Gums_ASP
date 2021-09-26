@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -35,7 +38,11 @@ public partial class invoice : System.Web.UI.Page
     protected void btnSubmitInvoice_Click(object sender, EventArgs e)
     {
         if (!Page.IsValid) return;
-        txtItemName1.Text = "DONE";
+
+
+        Server.Transfer("print.aspx", true);
+
+
     }
 
 
