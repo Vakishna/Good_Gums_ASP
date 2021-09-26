@@ -9,13 +9,15 @@ h1 {
     text-align: center;
 }
 
+
+
 nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-ul {
+nav > ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -41,4 +43,15 @@ li a:hover:not(.active) {
 
 .active {
     background-color: #04AA6D;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin-right: 50px;
+
+}
+
+div {
+    padding: 5px;
 }

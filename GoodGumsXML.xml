@@ -65,5 +65,13 @@
       <unitprice>11.58</unitprice>
       <quantity>150</quantity>
     </Purchase>
+    <Purchase>
+      <id>9</id>
+      <fullName>KTR ka</fullName>
+      <emailAddress>ktrka@live.com</emailAddress>
+      <productname>correaFederationBellXMannii</productname>
+      <unitprice>11.58</unitprice>
+      <quantity>11</quantity>
+    </Purchase>
   </purchases>
 </PurchaseCollection>

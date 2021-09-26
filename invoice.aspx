@@ -5,15 +5,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Invoice</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            padding: 5px;
-        }
-        div {
-            padding: 5px;
-        }
-    </style>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
