@@ -50,7 +50,18 @@
                     <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblQty3" runat="server" Text="0"></asp:Label></asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblTotal3" runat="server" Text="$0.00"></asp:Label></asp:TableCell>
                 </asp:TableRow>
+                <asp:TableRow>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblTotalCell" runat="server" Text="Total: "></asp:Label></asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="Label2" runat="server" Text=""></asp:Label></asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="Label3" runat="server" Text=""></asp:Label></asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblGrandTotal" runat="server" Text=""></asp:Label></asp:TableCell>
+                </asp:TableRow>
             </asp:Table>
+            <br />
+            <asp:Label ID="terms" runat="server" Text="Terms: Invoice is due to be paid in 14 days."></asp:Label>
+            <br />
+            <asp:Label ID="lblDueDate" runat="server" Text=""></asp:Label>
+
         </div>
     </form>
 </body>

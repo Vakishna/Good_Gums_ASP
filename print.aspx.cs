@@ -12,8 +12,11 @@ public partial class print : System.Web.UI.Page
 
         try
         {
+
+            DateTime today = DateTime.Now;
+            
             lblIssuedTo.Text = "Invoiced To: " + Request.Form["txtFullName"];
-            lblIssuedDate.Text = "Date Issued: " + DateTime.Now.ToString();
+            lblIssuedDate.Text = "Date Issued: " + today.ToString();
 
             if (Request.Form["txtItemName1"].Length > 0)
             {
@@ -36,10 +39,18 @@ public partial class print : System.Web.UI.Page
                 lblItem3.Text = Request.Form["txtItemName3"];
                 lblUnitPrice3.Text = "$" + Request.Form["txtUnitPrice3"];
                 lblQty3.Text = Request.Form["txtQty3"];
-                double total3 = Double.Parse(Request.Form["txtUnitPrice3"]) * Double.Parse(lblQty3.Text);
+                double total3 = Double.Parse(Request.Form["txtUnitPrice3"]) * Double.Parse(lblQty3.Text);                
                 lblTotal3.Text = "$" + total3;
             }
 
+            double totalPrice = Double.Parse(Request.Form["txtUnitPrice1"]) * Double.Parse(lblQty1.Text);
+            totalPrice += Double.Parse(Request.Form["txtUnitPrice2"]) * Double.Parse(lblQty2.Text);
+            totalPrice += Double.Parse(Request.Form["txtUnitPrice3"]) * Double.Parse(lblQty3.Text); ;
+
+            lblGrandTotal.Text = "$" + totalPrice.ToString();
+
+            TimeSpan duration = new TimeSpan(14, 0, 0, 0);
+            lblDueDate.Text = "Due Date: " + today.Add(duration).ToString();
         } catch (Exception ex)
         {
             lblIssuedTo.Text = ex.ToString();            

@@ -9,7 +9,10 @@
         table {
             border-collapse: collapse;
             padding: 5px;
-        }     
+        }
+        div {
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
