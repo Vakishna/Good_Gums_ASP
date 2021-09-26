@@ -14,8 +14,20 @@
             display: inline-block;
         }
     </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+    <nav>
+        <ul>
+          <li><a href="index.aspx">Home</a></li>
+          <li><a href="add.aspx">Add</a></li>
+          <li><a class="active" href="invoice.aspx">Invoice</a></li>
+          <li><a href="stocktake.aspx">Stocktake</a></li>
+        </ul>
+    </nav>
+
+
     <form id="form1" runat="server">
         <div style="background-color: lightgreen;">
             

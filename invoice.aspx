@@ -14,8 +14,20 @@
             padding: 5px;
         }
     </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+    <nav>
+        <ul>
+          <li><a href="index.aspx">Home</a></li>
+          <li><a href="add.aspx">Add</a></li>
+          <li><a class="active" href="invoice.aspx">Invoice</a></li>
+          <li><a href="stocktake.aspx">Stocktake</a></li>
+        </ul>
+    </nav>
+
+
     <form id="form1" runat="server">
         <div>
             <asp:Table ID="Table1" runat="server" BackColor="LightGreen" BorderColor="Black" BorderWidth="1">

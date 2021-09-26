@@ -5,8 +5,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Add Purchase</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <nav>
+        <ul>
+          <li><a href="index.aspx">Home</a></li>
+          <li><a class="active" href="add.aspx">Add</a></li>
+          <li><a href="invoice.aspx">Invoice</a></li>
+          <li><a href="stocktake.aspx">Stocktake</a></li>
+        </ul>
+    </nav>
+
 
     <h1>Add Purchase</h1>
     <form id="AddPurchaseForm" runat="server">
