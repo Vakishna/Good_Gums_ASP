@@ -66,11 +66,12 @@ public partial class add : System.Web.UI.Page
             StreamWriter streamWriter = new StreamWriter(filePath);
             xmlSerializer.Serialize(streamWriter, purchaseCollection);
             streamWriter.Close();
+            Response.Redirect(Request.Url.ToString(), false);
         } catch (Exception ex) {
             lblMessage.Text = ex.ToString();
         }
 
         ClearFormFields(sender, e);
-        Response.Redirect(Request.Url.ToString(), false);
+        
     }
 }

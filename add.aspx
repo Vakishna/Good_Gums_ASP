@@ -14,7 +14,7 @@
             <legend>Purchase Form</legend>
             <br />
             <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
-            <br />
+            
             <div>
                 <asp:Label ID="lblFullName" runat="server" Text="Full Name: "></asp:Label>
                 <asp:TextBox ID="txtFullName" runat="server"></asp:TextBox>

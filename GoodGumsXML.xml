@@ -49,5 +49,13 @@
       <unitprice>133</unitprice>
       <quantity>142</quantity>
     </Purchase>
+    <Purchase>
+      <id>7</id>
+      <fullName>VT Thayalan</fullName>
+      <emailAddress>hna2@gmail.com</emailAddress>
+      <productname>syzygiumSmithii</productname>
+      <unitprice>11.58</unitprice>
+      <quantity>6</quantity>
+    </Purchase>
   </purchases>
 </PurchaseCollection>
