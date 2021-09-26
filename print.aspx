@@ -27,7 +27,9 @@
           <li><a href="chart.aspx">Chart</a></li>
         </ul>
     </nav>
+    <br />
 
+    <h1>Print Invoice</h1>
 
     <form id="form1" runat="server">
         <div style="background-color: lightgreen;">
