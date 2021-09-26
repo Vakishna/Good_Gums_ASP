@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="stocktake.aspx.cs" Inherits="stocktake" %>
+﻿<%@ Page Language="C#" MaintainScrollPositionOnPostBack="true" AutoEventWireup="true" CodeFile="stocktake.aspx.cs" Inherits="stocktake" %>
 
 <!DOCTYPE html>
 
@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Stocktake</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="jquery-3.6.0.js"></script>
 </head>
 <body>
     <nav>
@@ -20,10 +21,132 @@
 
     <form id="form1" runat="server">
         <div>
+            <asp:Table ID="tblStocktake" runat="server">
+                <asp:TableRow BorderColor="Black" BorderWidth="1">
+                    <asp:TableCell ColumnSpan="5">
+                        <asp:Label runat="server" Text="Reorder Level: "></asp:Label>                        
+                        <asp:Button ID="btnLess" runat="server" OnClick="btnLess_Click" Text="-" autopostback="false" />
+                        <asp:TextBox ID="refillLvl" runat="server" ReadOnly="True" Text="10"></asp:TextBox>
+                        <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="+" autopostback="false" />
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1"></asp:TableCell>                    
+                </asp:TableRow>
 
+                <asp:TableRow BorderColor="Black" BorderWidth="1">                    
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblItemName" runat="server" Text="Item Name: "></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblUnitPrice" runat="server" Text="Stock Quantity: "></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblStockQty" runat="server" Text="Unit Price: "></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblReorderQty" runat="server" Text="Reorder Quantity: "></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblSubtotal" runat="server" Text="Subtotal: "></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                    </asp:TableCell>
+                </asp:TableRow>
 
+                <asp:TableRow BorderColor="Black" BorderWidth="1">
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:TextBox ID="txtItem1" runat="server"></asp:TextBox>
+                        <asp:CustomValidator ID="lenTxtItem1Cv" runat="server" ErrorMessage="Item (Line 1) must be <= 100 characters" Display="None" OnServerValidate="ValidateStringLength" ControlToValidate="txtItem1"></asp:CustomValidator>
+                        <asp:RequiredFieldValidator ID="txtItem1RFV" Display="None" runat="server" ControlToValidate="txtItem1" ErrorMessage="Item Name (Line 1) cannot be empty"></asp:RequiredFieldValidator>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:TextBox ID="txtStockQty1" runat="server"></asp:TextBox>
+                        <asp:RangeValidator ID="txtStockQty1Rv" ControlToValidate="txtStockQty1" runat="server" MinimumValue="0" MaximumValue="100" ErrorMessage="Stock quantity (Line 1) must be under 100" Type="Integer" Display="None"></asp:RangeValidator>
+                        <asp:RequiredFieldValidator ID="txtStockQty1RFV" Display="None" runat="server" ControlToValidate="txtStockQty1" ErrorMessage="Stock Quantity (Line 1) cannot be empty"></asp:RequiredFieldValidator>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:TextBox ID="txtUnitPrice1" runat="server"></asp:TextBox>
+                        <asp:RangeValidator ID="txtUnitPrice1Rv" runat="server" ErrorMessage="Unit Price (Line 1) Must be between 0.00 and 1000.00" MinimumValue="0.00" MaximumValue="1000.00" Type="Double" ControlToValidate="txtUnitPrice3" Display="None"></asp:RangeValidator>
+                        <asp:RequiredFieldValidator ID="txtUnitPrice1RFV" Display="None" runat="server" ControlToValidate="txtUnitPrice1" ErrorMessage="Unit Price (Line 1) cannot be empty"></asp:RequiredFieldValidator>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblReorderQty1" runat="server" Text=""></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblSubtotal1" runat="server" Text=""></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">                     
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow BorderColor="Black" BorderWidth="1">
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:TextBox ID="txtItem2" runat="server"></asp:TextBox>
+                        <asp:CustomValidator ID="lenTxtItem2Cv" runat="server" ErrorMessage="Item (Line 2) must be <= 100 characters" Display="None" OnServerValidate="ValidateStringLength" ControlToValidate="txtItem2"></asp:CustomValidator>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:TextBox ID="txtStockQty2" runat="server"></asp:TextBox>
+                        <asp:RangeValidator ID="txtStockQty2RV" ControlToValidate="txtStockQty2" runat="server" MinimumValue="0" MaximumValue="100" ErrorMessage="Stock quantity (Line 2) must be under 100" Type="Integer" Display="None"></asp:RangeValidator>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:TextBox ID="txtUnitPrice2" runat="server"></asp:TextBox>
+                        <asp:RangeValidator ID="txtUnitPrice2Rv" runat="server" ErrorMessage="Unit Price (Line 2) Must be between 0.00 and 1000.00" MinimumValue="0.00" MaximumValue="1000.00" Type="Double" ControlToValidate="txtUnitPrice2" Display="None"></asp:RangeValidator>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblReorderQty2" runat="server" Text=""></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblSubtotal2" runat="server" Text=""></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">                     
+                    </asp:TableCell>
+                </asp:TableRow>
 
+                <asp:TableRow BorderColor="Black" BorderWidth="1">
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:TextBox ID="txtItem3" runat="server"></asp:TextBox>
+                        <asp:CustomValidator ID="lenTxtItem3Cv" runat="server" ErrorMessage="Item (Line 3) must be <= 100 characters" Display="None" OnServerValidate="ValidateStringLength" ControlToValidate="txtItem3"></asp:CustomValidator>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:TextBox ID="txtStockQty3" runat="server"></asp:TextBox>
+                        <asp:RangeValidator ID="txtStockQty3Rv" ControlToValidate="txtStockQty3" runat="server" MinimumValue="0" MaximumValue="100" ErrorMessage="Stock quantity (Line 3) must be under 100" Type="Integer" Display="None"></asp:RangeValidator>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:TextBox ID="txtUnitPrice3" runat="server"></asp:TextBox>
+                        <asp:RangeValidator ID="txtUnitPrice3Rv" runat="server" ErrorMessage="Unit Price (Line 3) Must be between 0.00 and 1000.00" MinimumValue="0.00" MaximumValue="1000.00" Type="Double" ControlToValidate="txtUnitPrice3" Display="None"></asp:RangeValidator>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblReorderQty3" runat="server" Text=""></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblSubtotal3" runat="server" Text=""></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">                     
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow BorderColor="Black" BorderWidth="1">
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Button ID="btnCalculateStockTake" runat="server" OnClick="btcCalculateStockTake_Click" Text="Calculate" autopostback="true" />
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">                    
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">
+                        <asp:Label ID="lblTot" runat="server" Text="Total:"></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">                        
+                        <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>
+                    </asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1">                                                
+                    </asp:TableCell>
+                </asp:TableRow>
+            </asp:Table>
+            <asp:ValidationSummary ID="stocktakeVS" runat="server" />
         </div>
     </form>
+
+    <script>
+        
+
+    </script>
 </body>
 </html>
