@@ -44,6 +44,7 @@
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtItemName1" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvTxtItem1" runat="server" ControlToValidate="txtItemName1" ErrorMessage="Item Name (1) Required" Display="None"></asp:RequiredFieldValidator>
+                        <asp:CustomValidator ID="cvLenName1" runat="server" OnServerValidate="ValidateNameLength" Display="None" ControlToValidate="txtItemName1" ErrorMessage="(Item 1) must be < 100 Characters!"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtUnitPrice1" runat="server"></asp:TextBox>
@@ -60,6 +61,7 @@
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtItemName2" runat="server"></asp:TextBox>
                         <asp:CustomValidator ID="cvFilledOrEmptyName2" runat="server" OnServerValidate="validateFilledOrEmpty2" Display="None" ControlToValidate="txtItemName2" ErrorMessage="Please ensure all (Line 2) items are filled OR empty"></asp:CustomValidator>
+                        <asp:CustomValidator ID="cvLenName2" runat="server" OnServerValidate="ValidateNameLength" Display="None" ControlToValidate="txtItemName2" ErrorMessage="(Item 2) must be < 100 Characters!"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtUnitPrice2" runat="server"></asp:TextBox>
@@ -75,12 +77,16 @@
                 <asp:TableRow runat="server">
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtItemName3" runat="server"></asp:TextBox>
+                        <asp:CustomValidator ID="cvFilledOrEmptyName3" runat="server" OnServerValidate="validateFilledOrEmpty3" Display="None" ControlToValidate="txtItemName3" ErrorMessage="Please ensure all (Line 3) items are filled OR empty"></asp:CustomValidator>
+                        <asp:CustomValidator ID="cvLenName3" runat="server" OnServerValidate="ValidateNameLength" Display="None" ControlToValidate="txtItemName3" ErrorMessage="(Item 3) must be < 100 Characters!"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtUnitPrice3" runat="server"></asp:TextBox>
+                        <asp:CustomValidator ID="cvFilledOrEmptyPrice3" runat="server" OnServerValidate="validateFilledOrEmpty3" Display="None" ControlToValidate="txtUnitPrice3" ErrorMessage="Please ensure all (Line 3) items are filled OR empty"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtQty3" runat="server"></asp:TextBox>
+                        <asp:CustomValidator ID="cvFilledOrEmptyQty3" runat="server" OnServerValidate="validateFilledOrEmpty3" Display="None" ControlToValidate="txtQty3" ErrorMessage="Please ensure all (Line 3) items are filled OR empty"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">                     
                     </asp:TableCell>

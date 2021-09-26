@@ -20,6 +20,11 @@ public partial class invoice : System.Web.UI.Page
         e.IsValid = txtFullName.Text.Length < 50;
     }
 
+    protected void ValidateNameLength(object sender, ServerValidateEventArgs e)
+    {
+        e.IsValid = e.Value.Length < 100;
+    }
+
     protected void validateFilledOrEmpty2(object sender, ServerValidateEventArgs e)
     {
         if ((txtItemName2.Text.Length == 0) && (txtQty2.Text.Length == 0) && (txtUnitPrice2.Text.Length == 0))
@@ -34,6 +39,25 @@ public partial class invoice : System.Web.UI.Page
             e.IsValid = false;
         }
     }
+
+    protected void validateFilledOrEmpty3(object sender, ServerValidateEventArgs e)
+    {
+        if ((txtItemName3.Text.Length == 0) && (txtQty3.Text.Length == 0) && (txtUnitPrice3.Text.Length == 0))
+        {
+            e.IsValid = true;
+        }
+        if ((txtItemName3.Text.Length != 0) && (txtQty3.Text.Length != 0) && (txtUnitPrice3.Text.Length != 0))
+        {
+            e.IsValid = true;
+        }
+        else
+        {
+            e.IsValid = false;
+        }
+    }
+
+
+
 
     protected void btnSubmitInvoice_Click(object sender, EventArgs e)
     {
