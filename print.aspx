@@ -24,6 +24,7 @@
           <li><a href="add.aspx">Add</a></li>
           <li><a class="active" href="invoice.aspx">Invoice</a></li>
           <li><a href="stocktake.aspx">Stocktake</a></li>
+          <li><a href="chart.aspx">Chart</a></li>
         </ul>
     </nav>
 

@@ -14,10 +14,10 @@
           <li><a class="active" href="add.aspx">Add</a></li>
           <li><a href="invoice.aspx">Invoice</a></li>
           <li><a href="stocktake.aspx">Stocktake</a></li>
+          <li><a href="chart.aspx">Chart</a></li>
         </ul>
     </nav>
-
-
+    <br />
     <h1>Add Purchase</h1>
     <form id="AddPurchaseForm" runat="server">
         <fieldset>

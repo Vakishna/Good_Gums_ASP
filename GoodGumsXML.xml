@@ -57,5 +57,13 @@
       <unitprice>11.58</unitprice>
       <quantity>6</quantity>
     </Purchase>
+    <Purchase>
+      <id>8</id>
+      <fullName>VT Thayalan</fullName>
+      <emailAddress>vakishna2@gmail.com</emailAddress>
+      <productname>hardenbergiaViolacea</productname>
+      <unitprice>11.58</unitprice>
+      <quantity>150</quantity>
+    </Purchase>
   </purchases>
 </PurchaseCollection>

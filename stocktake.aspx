@@ -11,9 +11,10 @@
     <nav>
         <ul>
           <li><a href="index.aspx">Home</a></li>
-          <li><a href="add.aspx">Add</a></li>
+          <li><a  href="add.aspx">Add</a></li>
           <li><a href="invoice.aspx">Invoice</a></li>
           <li><a class="active" href="stocktake.aspx">Stocktake</a></li>
+          <li><a href="chart.aspx">Chart</a></li>
         </ul>
     </nav>
 

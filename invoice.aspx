@@ -24,9 +24,11 @@
           <li><a href="add.aspx">Add</a></li>
           <li><a class="active" href="invoice.aspx">Invoice</a></li>
           <li><a href="stocktake.aspx">Stocktake</a></li>
+          <li><a href="chart.aspx">Chart</a></li>
         </ul>
     </nav>
-
+    <br />
+    <h1>Generate Invoice</h1>
 
     <form id="form1" runat="server">
         <div>

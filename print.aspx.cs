@@ -43,9 +43,17 @@ public partial class print : System.Web.UI.Page
                 lblTotal3.Text = "$" + total3;
             }
 
-            double totalPrice = Double.Parse(Request.Form["txtUnitPrice1"]) * Double.Parse(lblQty1.Text);
-            totalPrice += Double.Parse(Request.Form["txtUnitPrice2"]) * Double.Parse(lblQty2.Text);
-            totalPrice += Double.Parse(Request.Form["txtUnitPrice3"]) * Double.Parse(lblQty3.Text); ;
+           double totalPrice = Double.Parse(Request.Form["txtUnitPrice1"]) * Double.Parse(Request.Form["txtQty1"]);
+
+            if (Request.Form["txtItemName2"].Length > 0)
+            {
+                totalPrice += Double.Parse(Request.Form["txtUnitPrice2"]) * Double.Parse(Request.Form["txtQty2"]);
+            }
+
+            if (Request.Form["txtItemName3"].Length > 0)
+            {
+                totalPrice += Double.Parse(Request.Form["txtUnitPrice3"]) * Double.Parse(Request.Form["txtQty3"]);
+            }
 
             lblGrandTotal.Text = "$" + totalPrice.ToString();
 

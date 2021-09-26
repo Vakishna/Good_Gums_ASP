@@ -15,9 +15,12 @@
           <li><a href="add.aspx">Add</a></li>
           <li><a href="invoice.aspx">Invoice</a></li>
           <li><a href="stocktake.aspx">Stocktake</a></li>
+          <li><a href="chart.aspx">Chart</a></li>
         </ul>
     </nav>
-    
+    <br />
+    <h1>Purchases</h1>
+
 
     <form id="form1" runat="server">
         <asp:Label ID="txtLargeOrders" runat="server" Text="Large Orders"></asp:Label>
