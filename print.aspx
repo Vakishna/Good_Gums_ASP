@@ -33,10 +33,10 @@
                     <asp:TableCell BorderColor="Black" BorderWidth="1">Subtotal</asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
-                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblItem1" runat="server" Text=""></asp:Label></asp:TableCell>
-                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblUnitPrice1" runat="server" Text=""></asp:Label></asp:TableCell>
-                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblQty1" runat="server" Text=""></asp:Label></asp:TableCell>
-                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblTotal1" runat="server" Text=""></asp:Label></asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblItem1" runat="server" Text="---"></asp:Label></asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblUnitPrice1" runat="server" Text="$0.00"></asp:Label></asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblQty1" runat="server" Text="0"></asp:Label></asp:TableCell>
+                    <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblTotal1" runat="server" Text="$0.00"></asp:Label></asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell BorderColor="Black" BorderWidth="1"><asp:Label ID="lblItem2" runat="server" Text="---"></asp:Label></asp:TableCell>
