@@ -81,14 +81,17 @@
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtItem2" runat="server"></asp:TextBox>
                         <asp:CustomValidator ID="lenTxtItem2Cv" runat="server" ErrorMessage="Item (Line 2) must be <= 100 characters" Display="None" OnServerValidate="ValidateStringLength" ControlToValidate="txtItem2"></asp:CustomValidator>
+                        <asp:CustomValidator ID="cvFilledOrEmptyName2" runat="server" OnServerValidate="validateFilledOrEmpty2" Display="None" ControlToValidate="txtItem2" ErrorMessage="Please ensure all (Line 2) items are filled OR empty"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtStockQty2" runat="server"></asp:TextBox>
                         <asp:RangeValidator ID="txtStockQty2RV" ControlToValidate="txtStockQty2" runat="server" MinimumValue="0" MaximumValue="100" ErrorMessage="Stock quantity (Line 2) must be under 100" Type="Integer" Display="None"></asp:RangeValidator>
+                        <asp:CustomValidator ID="cvFilledOrEmptyStockQty2" runat="server" OnServerValidate="validateFilledOrEmpty2" Display="None" ControlToValidate="txtStockQty2" ErrorMessage="Please ensure all (Line 2) items are filled OR empty"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtUnitPrice2" runat="server"></asp:TextBox>
                         <asp:RangeValidator ID="txtUnitPrice2Rv" runat="server" ErrorMessage="Unit Price (Line 2) Must be between 0.00 and 1000.00" MinimumValue="0.00" MaximumValue="1000.00" Type="Double" ControlToValidate="txtUnitPrice2" Display="None"></asp:RangeValidator>
+                        <asp:CustomValidator ID="cvFilledOrEmptyUnitPrice2" runat="server" OnServerValidate="validateFilledOrEmpty2" Display="None" ControlToValidate="txtUnitPrice2" ErrorMessage="Please ensure all (Line 2) items are filled OR empty"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:Label ID="lblReorderQty2" runat="server" Text=""></asp:Label>
@@ -104,14 +107,17 @@
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtItem3" runat="server"></asp:TextBox>
                         <asp:CustomValidator ID="lenTxtItem3Cv" runat="server" ErrorMessage="Item (Line 3) must be <= 100 characters" Display="None" OnServerValidate="ValidateStringLength" ControlToValidate="txtItem3"></asp:CustomValidator>
+                        <asp:CustomValidator ID="cvFilledOrEmptyName3" runat="server" OnServerValidate="validateFilledOrEmpty3" Display="None" ControlToValidate="txtItem3" ErrorMessage="Please ensure all (Line 3) items are filled OR empty"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtStockQty3" runat="server"></asp:TextBox>
                         <asp:RangeValidator ID="txtStockQty3Rv" ControlToValidate="txtStockQty3" runat="server" MinimumValue="0" MaximumValue="100" ErrorMessage="Stock quantity (Line 3) must be under 100" Type="Integer" Display="None"></asp:RangeValidator>
+                        <asp:CustomValidator ID="cvFilledOrEmptyStockQty3" runat="server" OnServerValidate="validateFilledOrEmpty3" Display="None" ControlToValidate="txtStockQty3" ErrorMessage="Please ensure all (Line 3) items are filled OR empty"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtUnitPrice3" runat="server"></asp:TextBox>
                         <asp:RangeValidator ID="txtUnitPrice3Rv" runat="server" ErrorMessage="Unit Price (Line 3) Must be between 0.00 and 1000.00" MinimumValue="0.00" MaximumValue="1000.00" Type="Double" ControlToValidate="txtUnitPrice3" Display="None"></asp:RangeValidator>
+                        <asp:CustomValidator ID="cvFilledOrEmptyUnitPrice3" runat="server" OnServerValidate="validateFilledOrEmpty3" Display="None" ControlToValidate="txtUnitPrice3" ErrorMessage="Please ensure all (Line 3) items are filled OR empty"></asp:CustomValidator>
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:Label ID="lblReorderQty3" runat="server" Text=""></asp:Label>

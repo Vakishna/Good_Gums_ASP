@@ -39,9 +39,50 @@ public partial class stocktake : System.Web.UI.Page
         }
     }
 
+    protected void validateFilledOrEmpty2(object sender, ServerValidateEventArgs e)
+    {
+        if ((txtItem2.Text.Length == 0) && (txtStockQty2.Text.Length == 0) && (txtUnitPrice2.Text.Length == 0))
+        {
+            e.IsValid = true;
+        }
+        if ((txtItem2.Text.Length != 0) && (txtStockQty2.Text.Length != 0) && (txtUnitPrice2.Text.Length != 0))
+        {
+            e.IsValid = true;
+        }
+        else
+        {
+            e.IsValid = false;
+        }
+    }
+
+    protected void validateFilledOrEmpty3(object sender, ServerValidateEventArgs e)
+    {
+        if ((txtItem3.Text.Length == 0) && (txtStockQty3.Text.Length == 0) && (txtUnitPrice3.Text.Length == 0))
+        {
+            e.IsValid = true;
+        }
+        if ((txtItem3.Text.Length != 0) && (txtStockQty3.Text.Length != 0) && (txtUnitPrice3.Text.Length != 0))
+        {
+            e.IsValid = true;
+        }
+        else
+        {
+            e.IsValid = false;
+        }
+    }
+
+
+
+
+
+
+
 
     protected void btcCalculateStockTake_Click(object sender, EventArgs e)
     {
+
+
+        if (!Page.IsValid) return;
         int reoderLevel = Int32.Parse(refillLvl.Text.ToString());
         int stockQty = Int32.Parse(txtStockQty1.Text.ToString());
 
