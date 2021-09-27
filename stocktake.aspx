@@ -18,6 +18,9 @@
           <li><a href="chart.aspx">Chart</a></li>
         </ul>
     </nav>
+    <br />
+    <h1>Stocktake</h1>
+
 
     <form id="form1" runat="server">
         <div>
@@ -25,9 +28,9 @@
                 <asp:TableRow BorderColor="Black" BorderWidth="1">
                     <asp:TableCell ColumnSpan="5">
                         <asp:Label runat="server" Text="Reorder Level: "></asp:Label>                        
-                        <asp:Button ID="btnLess" runat="server" OnClick="btnLess_Click" Text="-" autopostback="false" />
+                        <asp:Button ID="btnLess" runat="server" OnClick="btnLess_Click" Text="-" autopostback="false" CausesValidation="False" />
                         <asp:TextBox ID="refillLvl" runat="server" ReadOnly="True" Text="10"></asp:TextBox>
-                        <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="+" autopostback="false" />
+                        <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="+" autopostback="false" CausesValidation="False" />
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1"></asp:TableCell>                    
                 </asp:TableRow>
