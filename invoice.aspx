@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
     <nav>
         <ul>
           <li><a href="index.aspx">Home</a></li>
@@ -18,7 +17,9 @@
           <li><a href="chart.aspx">Chart</a></li>
         </ul>
     </nav>
+
     <br />
+
     <h1>Generate Invoice</h1>
 
     <form id="form1" runat="server">

@@ -71,24 +71,17 @@ public partial class stocktake : System.Web.UI.Page
         }
     }
 
-
-
-
-
-
-
-
     protected void btcCalculateStockTake_Click(object sender, EventArgs e)
     {
 
-
         if (!Page.IsValid) return;
-        int reoderLevel = Int32.Parse(refillLvl.Text.ToString());
-        int stockQty = Int32.Parse(txtStockQty1.Text.ToString());
 
-        if (stockQty < reoderLevel)
+        int reoderLevel = Int32.Parse(refillLvl.Text.ToString());
+        int stockQty1 = Int32.Parse(txtStockQty1.Text.ToString());
+
+        if (stockQty1 < reoderLevel)
         {
-            int toOrderQt = reoderLevel - stockQty;
+            int toOrderQt = reoderLevel - stockQty1;
             double price = Double.Parse(txtUnitPrice1.Text);
             double toOrderDouble = Double.Parse(toOrderQt.ToString());
             double totalToOrderPrice = price * toOrderDouble;
@@ -96,8 +89,40 @@ public partial class stocktake : System.Web.UI.Page
 
             lblReorderQty1.Text = toOrderDouble.ToString();
             lblSubtotal1.Text = "$" + totalToOrderPrice.ToString();
+        }
 
+        if (txtItem2.Text.Length > 0)
+        {
 
+            int stockQty2 = Int32.Parse(txtStockQty2.Text.ToString());
+            int toOrderQt = reoderLevel - stockQty2;
+
+            if (stockQty2 < reoderLevel)
+            {
+                double price = Double.Parse(txtUnitPrice2.Text);
+                double toOrderDouble = Double.Parse(toOrderQt.ToString());
+                double totalToOrderPrice = price * toOrderDouble;
+
+                lblReorderQty2.Text = toOrderDouble.ToString();
+                lblSubtotal2.Text = "$" + totalToOrderPrice.ToString();
+            }
+        }
+
+        if (txtItem3.Text.Length > 0)
+        {
+
+            int stockQty3 = Int32.Parse(txtStockQty3.Text.ToString());
+            int toOrderQt = reoderLevel - stockQty3;
+
+            if (stockQty3 < reoderLevel)
+            {
+                double price = Double.Parse(txtUnitPrice3.Text);
+                double toOrderDouble = Double.Parse(toOrderQt.ToString());
+                double totalToOrderPrice = price * toOrderDouble;
+
+                lblReorderQty3.Text = toOrderDouble.ToString();
+                lblSubtotal3.Text = "$" + totalToOrderPrice.ToString();
+            }
         }
     }
 }

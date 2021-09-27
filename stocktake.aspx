@@ -81,7 +81,7 @@
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtItem2" runat="server"></asp:TextBox>
                         <asp:CustomValidator ID="lenTxtItem2Cv" runat="server" ErrorMessage="Item (Line 2) must be <= 100 characters" Display="None" OnServerValidate="ValidateStringLength" ControlToValidate="txtItem2"></asp:CustomValidator>
-                        <asp:CustomValidator ID="cvFilledOrEmptyName2" runat="server" OnServerValidate="validateFilledOrEmpty2" Display="None" ControlToValidate="txtItem2" ErrorMessage="Please ensure all (Line 2) items are filled OR empty"></asp:CustomValidator>
+                        <asp:CustomValidator ID="cvFilledOrEmptyName2" runat="server" OnServerValidate="validateFilledOrEmpty2" Display="None" ControlToValidate="txtItem2" ErrorMessage="Please ensure all (Line 2) items are filled OR empty"></asp:CustomValidator>                        
                     </asp:TableCell>
                     <asp:TableCell BorderColor="Black" BorderWidth="1">
                         <asp:TextBox ID="txtStockQty2" runat="server"></asp:TextBox>
@@ -151,8 +151,7 @@
     </form>
 
     <script>
-        
-
+       
     </script>
 </body>
 </html>
