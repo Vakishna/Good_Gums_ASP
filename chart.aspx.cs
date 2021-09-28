@@ -13,6 +13,8 @@ public partial class chart : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        // TODO: Add axis
         DataSet ds = new DataSet();
         ds = GetData(sender, e);
         yearlyEarningsChart.DataSource = ds;
