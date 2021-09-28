@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Invoice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -24,7 +27,7 @@
 
     <form id="form1" runat="server">
         <div>
-            <asp:Table ID="Table1" runat="server" BackColor="LightGreen" BorderColor="Black" BorderWidth="1">
+            <asp:Table ID="Table1" runat="server" BorderColor="Black" BorderWidth="1">
                 <asp:TableRow runat="server" BorderColor="Black" BorderWidth="1">
                     <asp:TableCell ColumnSpan="3" BorderColor="Black" BorderWidth="1"> 
                         <asp:Label ID="lblFullName" runat="server" Text="Full Name"></asp:Label>

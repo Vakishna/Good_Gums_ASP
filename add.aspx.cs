@@ -44,8 +44,10 @@ public partial class add : System.Web.UI.Page
             string productname = ddlProductName.SelectedValue;
             int qty = Int32.Parse(txtQty.Text);
             double unitprice = Double.Parse(txtUnitPrice.Text);
-
-            Purchase newPurchase = new Purchase(id, fullName, emailAddress, productname, unitprice, qty);
+            DateTime purchased = new DateTime();
+            purchased = DateTime.Now;
+            
+            Purchase newPurchase = new Purchase(id, fullName, emailAddress, productname, unitprice, qty, purchased);
             purchases.purchases.Add(newPurchase);
 
             Session["purchaseCollection"] = purchases;

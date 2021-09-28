@@ -6,6 +6,9 @@
 <head runat="server">
     <title>Stocktake</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
     <script src="jquery-3.6.0.js"></script>
 </head>
 <body>

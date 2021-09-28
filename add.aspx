@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Add Purchase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -39,20 +42,21 @@
             <div>
                 <asp:Label ID="lblProductName" runat="server" Text="Product Name: "></asp:Label>
                 <asp:DropDownList ID="ddlProductName" runat="server">
-                     <asp:ListItem Enabled="True" Selected="False" Text="Eucalyptus Caesia" Value="eucalyptusCaesia" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Eucalyptus Pauciflora" Value="eucalyptusPauciflora" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Corymbia Ficifolia" Value="corymbiaFicifolia" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Callistemon Citrinus" Value="callistemonCitrinus" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Hardenbergia Violacea" Value="hardenbergiaViolacea" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Poa Labillardierei" Value="poaLabillardierei" />    
-                     <asp:ListItem Enabled="True" Selected="False" Text="Syzygium Smithii" Value="syzygiumSmithii" /> 
-                     <asp:ListItem Enabled="True" Selected="False" Text="Correa Federation Bell X Mannii" Value="correaFederationBellXMannii" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Grevillea Alpina X Rosmarinifolia" Value="grevilleaAlpinaXRosmarinifolia" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Grevillia Robusta" Value="grevilliaRobusta" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Telopea Speciosissima" Value="telopeaSpeciosissima" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Boronia Serrulata" Value="boroniaSerrulata" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Anigozanthos Flavidus" Value="anigozanthosFlavidus" />
-                     <asp:ListItem Enabled="True" Selected="False" Text="Angophora Costata" Value="angophoraCostata" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Silver Princess Gum" Value="Silver Princess Gum" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Snow Gum" Value="Snow Gum" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Red Flowering Gum" Value="Red Flowering Gum" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Crimson Bottlebrush" Value="Crimson Bottlebrush" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Happy Wanderer" Value="Happy Wanderer" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Poa Grass" Value="Poa Grass" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Golden Wattle" Value="Golden Wattle" />   
+                     <asp:ListItem Enabled="True" Selected="False" Text="Lilly Pilly" Value="Lilly Pilly" /> 
+                     <asp:ListItem Enabled="True" Selected="False" Text="Canberra Bells" Value="Canberra Bells" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Grevillia Firecracker" Value="Grevillia Firecracker" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Silky Oak" Value="Silky Oak" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Waratah" Value="Waratah" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Rose Boronia" Value="Rose Boronia" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Tall Kangaroo Paw" Value="Tall Kangaroo Paw" />
+                     <asp:ListItem Enabled="True" Selected="False" Text="Rusty Gum" Value="Rusty Gum" />
                 </asp:DropDownList>
             </div>
             <div>

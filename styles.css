@@ -9,8 +9,6 @@ h1 {
     text-align: center;
 }
 
-
-
 nav {
     margin: 0;
     padding: 0;
@@ -27,6 +25,7 @@ nav > ul {
 
 li {
     float: left;
+    
 }
 
 li a {
@@ -35,6 +34,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: 'Abel', sans-serif;
 }
 
 li a:hover:not(.active) {
@@ -50,7 +50,7 @@ table {
     border-collapse: collapse;
     margin-right: 25px;
     text-align: center;
-
+    background-color: #DAF4C2;
 }
 
 div {

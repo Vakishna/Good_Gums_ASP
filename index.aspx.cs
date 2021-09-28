@@ -43,6 +43,7 @@ public partial class index : System.Web.UI.Page
         dt.Columns.Add("productname", typeof(string));
         dt.Columns.Add("unitprice", typeof(string));
         dt.Columns.Add("quantity", typeof(string));
+        dt.Columns.Add("purchasedDate", typeof(string));
 
         XmlDocument doc = new XmlDocument();
         doc.Load(Server.MapPath("./GoodGumsXML.xml"));
@@ -56,6 +57,7 @@ public partial class index : System.Web.UI.Page
             dtrow["productname"] = node["productname"].InnerText;
             dtrow["unitprice"] = node["unitprice"].InnerText;
             dtrow["quantity"] = node["quantity"].InnerText;
+            dtrow["purchasedDate"] = node["purchasedDate"].InnerText;
             dt.Rows.Add(dtrow);
         }
 

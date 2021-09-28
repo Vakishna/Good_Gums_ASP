@@ -100,14 +100,5 @@
       <quantity>15</quantity>
       <purchasedDate>2021-09-17T13:16:00</purchasedDate>
     </Purchase>
-    <Purchase>
-      <id>12</id>
-      <fullName>Soulja Boy</fullName>
-      <emailAddress>souljaboytellem@sb.com</emailAddress>
-      <productname>Silky Oak</productname>
-      <unitprice>12.93</unitprice>
-      <quantity>19</quantity>
-      <purchasedDate>2021-09-28T10:00:13.505434+10:00</purchasedDate>
-    </Purchase>
   </purchases>
 </PurchaseCollection>

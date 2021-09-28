@@ -17,6 +17,7 @@ public class Purchase
         public string productname { get; set; }
         public double unitprice { get; set; }
         public int quantity { get; set; }
+        public DateTime purchasedDate { get; set; }
 
         public Purchase()
         {
@@ -26,9 +27,10 @@ public class Purchase
             this.productname = "";
             this.unitprice = 0;
             this.quantity = 0;
+            this.purchasedDate = new DateTime();
         }
 
-        public Purchase(int id, string fullName, string emailAddress, string productname, double unitprice, int quantity)
+        public Purchase(int id, string fullName, string emailAddress, string productname, double unitprice, int quantity, DateTime purchasedDate)
         {
             this.id = id;
             this.fullName = fullName;
@@ -36,5 +38,6 @@ public class Purchase
             this.productname = productname;
             this.unitprice = unitprice;
             this.quantity = quantity;
+            this.purchasedDate = purchasedDate;
         }
 }
