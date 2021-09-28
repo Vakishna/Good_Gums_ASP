@@ -7,7 +7,7 @@
 <head runat="server">
     <title>Chart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
@@ -21,6 +21,8 @@
           <li><a class="active" href="chart.aspx">Chart</a></li>
         </ul>
     </nav>
+    <br />
+    <h1>Sales Data</h1>
 
     <form id="form1" runat="server">
         <div>
