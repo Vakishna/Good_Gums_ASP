@@ -16,6 +16,8 @@ public partial class chart : System.Web.UI.Page
         DataSet ds = new DataSet();
         ds = GetData(sender, e);
         yearlyEarningsChart.DataSource = ds;
+        yearlyEarningsChart.Series[0].ChartType = System.Web.UI.DataVisualization.Charting.SeriesChartType.Line;
+
 
     }
 
