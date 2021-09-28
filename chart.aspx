@@ -24,7 +24,14 @@
 
     <form id="form1" runat="server">
         <div>
-
+            <asp:Chart ID="yearlyEarningsChart" runat="server">
+                <Series>
+                    <asp:Series Name="SalesSeries" XValueMember="0" YValueMembers="1"></asp:Series>
+                </Series>
+                <ChartAreas>
+                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                </ChartAreas>
+            </asp:Chart>
         </div>
     </form>
 </body>
