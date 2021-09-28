@@ -102,8 +102,8 @@
     </Purchase>
     <Purchase>
       <id>12</id>
-      <fullName>Soulja Boy</fullName>
-      <emailAddress>souljaboytellem@sb.com</emailAddress>
+      <fullName>Linux Guy</fullName>
+      <emailAddress>linuxguy@hotmail.com</emailAddress>
       <productname>Silky Oak</productname>
       <unitprice>12.93</unitprice>
       <quantity>19</quantity>
