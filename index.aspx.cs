@@ -39,7 +39,8 @@ public partial class index : System.Web.UI.Page
     {
         DataTable dt = new DataTable();
         dt.Columns.Add("id", typeof(string));
-        dt.Columns.Add("emailAddress", typeof(string));
+        dt.Columns.Add("fullName", typeof(string));
+        dt.Columns.Add("emailAddress", typeof(string));        
         dt.Columns.Add("productname", typeof(string));
         dt.Columns.Add("unitprice", typeof(string));
         dt.Columns.Add("quantity", typeof(string));
@@ -53,6 +54,7 @@ public partial class index : System.Web.UI.Page
         {
             DataRow dtrow = dt.NewRow();
             dtrow["id"] = node["id"].InnerText;
+            dtrow["fullName"] = node["fullName"].InnerText;
             dtrow["emailAddress"] = node["emailAddress"].InnerText;
             dtrow["productname"] = node["productname"].InnerText;
             dtrow["unitprice"] = node["unitprice"].InnerText;
