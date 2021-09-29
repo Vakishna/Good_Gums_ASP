@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -19,6 +20,21 @@ public partial class chart : System.Web.UI.Page
         ds = GetData(sender, e);
         yearlyEarningsChart.DataSource = ds;
         yearlyEarningsChart.Series[0].ChartType = System.Web.UI.DataVisualization.Charting.SeriesChartType.Line;
+        yearlyEarningsChart.ChartAreas.Add("SalesSeries");
+        yearlyEarningsChart.Series[0].YValueMembers = "Sales";
+        yearlyEarningsChart.Series[0].XValueMember = "Year";
+
+        yearlyEarningsChart.ChartAreas["ChartArea1"].AxisX.IsMarginVisible = true;
+        yearlyEarningsChart.ChartAreas["ChartArea1"].AxisX.Interval = 1;
+        yearlyEarningsChart.ChartAreas["ChartArea1"].AxisX.Maximum = Double.NaN;
+        yearlyEarningsChart.ChartAreas["ChartArea1"].AxisX.Title = "Year";
+        yearlyEarningsChart.ChartAreas["ChartArea1"].AxisX.TitleFont = new Font("Sans Serif", 10, FontStyle.Bold);
+
+
+        yearlyEarningsChart.ChartAreas["ChartArea1"].AxisY.Title = "Sales (AUD)";
+        yearlyEarningsChart.ChartAreas["ChartArea1"].AxisY.TitleFont = new Font("Sans Serif", 10, FontStyle.Bold);
+
+
 
     }
 

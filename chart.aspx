@@ -8,7 +8,7 @@
     <title>Chart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />  
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -22,19 +22,30 @@
         </ul>
     </nav>
     <br />
-    <h1>Sales Data</h1>
 
-    <form id="form1" runat="server">
-        <div>
-            <asp:Chart ID="yearlyEarningsChart" runat="server">
-                <Series>
-                    <asp:Series Name="SalesSeries" XValueMember="0" YValueMembers="1"></asp:Series>
-                </Series>
-                <ChartAreas>
-                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                </ChartAreas>
-            </asp:Chart>
-        </div>
-    </form>
+    <main>
+        <h1>Sales Data</h1>
+
+        <form id="form1" runat="server">
+            <div>
+                <asp:Chart ID="yearlyEarningsChart" runat="server" Height="625px" Width="725px">
+                    <Series>
+                        <asp:Series Name="SalesSeries" XValueMember="0" YValueMembers="1"></asp:Series>
+                    </Series>
+                    <ChartAreas>
+                        <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                    </ChartAreas>
+                </asp:Chart>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy 2021 - Good Gums</p>
+    </footer>
+
+    <script>
+    </script>
+
+
 </body>
 </html>

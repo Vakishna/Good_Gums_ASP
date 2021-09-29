@@ -22,14 +22,25 @@
         </ul>
     </nav>
     <br />
-    <h1>Purchases</h1>
+    
+    <main>
+        <h1>Purchases</h1>
 
 
-    <form id="form1" runat="server">
-        <asp:Label ID="txtLargeOrders" runat="server" Text="Large Orders"></asp:Label>
+        <form id="form1" runat="server">
+            <asp:Label ID="txtLargeOrders" runat="server" Text="Large Orders"></asp:Label>
 
-        <asp:GridView ID="GridViewPurchases" runat="server">    
-        </asp:GridView>
-    </form>
+            <asp:GridView ID="GridViewPurchases" runat="server">    
+            </asp:GridView>
+
+
+
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy 2021 - Good Gums</p>
+    </footer>
+
 </body>
 </html>
